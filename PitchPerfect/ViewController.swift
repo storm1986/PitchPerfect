@@ -17,10 +17,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+// Added in Lesson 3 > 4.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear called")
+    }
+
     @IBAction func recordAudio(_ sender: Any) {
         print("record button was pressed")
         recordingLabel.text = "Recording in Progress"
-    }   
+    }
     
+    @IBAction func stopRecording(_ sender: Any) {
+        print("stop recording button was pressed")
+    }
 }
 
